@@ -1,0 +1,17 @@
+[
+  {
+    "marketKey": "1756912726711",
+    "marketPDA": "67194tYbAjconMQqZKUc3nD8DiHzh7fkoRTz5rMkscsX",
+    "answerPDA": "Bs3BBW7sJ4iNSZp2BQEEMj6v5AvW8Ld5QWPa4VNMJde2",
+    "title": "Who will win the 2024 Championship?",
+    "creator": "88gQv9Y9u6HWWMmne7mKRTTCAhmPpm91Ds8JeFJs8wAp",
+    "answerKeys": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "status": "approve",
+    "timestamp": "2025-09-03T15:18:49.139Z"
+  }
+]

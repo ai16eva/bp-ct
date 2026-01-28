@@ -1,0 +1,6573 @@
+{
+  "address": "7TZjVdq7tCURLGSnJfd41K9W9k4jhjsJFQt7qqeBCEhe",
+  "metadata": {
+    "name": "boomplay_governance",
+    "version": "0.1.0",
+    "spec": "0.1.0"
+  },
+  "instructions": [
+    {
+      "name": "cancel_answer",
+      "discriminator": [
+        229,
+        166,
+        156,
+        99,
+        10,
+        48,
+        130,
+        19
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "answer_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  110,
+                  115,
+                  119,
+                  101,
+                  114,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        },
+        {
+          "name": "reason",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "cancel_decision",
+      "discriminator": [
+        243,
+        100,
+        254,
+        253,
+        209,
+        98,
+        214,
+        102
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "decision_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  100,
+                  101,
+                  99,
+                  105,
+                  115,
+                  105,
+                  111,
+                  110,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "cancel_quest",
+      "discriminator": [
+        204,
+        232,
+        50,
+        68,
+        92,
+        169,
+        110,
+        198
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "quest_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  113,
+                  117,
+                  101,
+                  115,
+                  116,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "create_collection",
+      "discriminator": [
+        156,
+        251,
+        92,
+        54,
+        233,
+        2,
+        16,
+        82
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "collection_mint",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  108,
+                  108,
+                  101,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  45,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "collection_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  108,
+                  108,
+                  101,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  45,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "collection_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "collection_authority"
+              },
+              {
+                "kind": "const",
+                "value": [
+                  6,
+                  221,
+                  246,
+                  225,
+                  215,
+                  101,
+                  161,
+                  147,
+                  217,
+                  203,
+                  225,
+                  70,
+                  206,
+                  235,
+                  121,
+                  172,
+                  28,
+                  180,
+                  133,
+                  237,
+                  95,
+                  91,
+                  55,
+                  145,
+                  58,
+                  140,
+                  245,
+                  133,
+                  126,
+                  255,
+                  0,
+                  169
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "collection_mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "collection_metadata",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  101,
+                  116,
+                  97,
+                  100,
+                  97,
+                  116,
+                  97
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "metadata_program"
+              },
+              {
+                "kind": "account",
+                "path": "collection_mint"
+              }
+            ],
+            "program": {
+              "kind": "account",
+              "path": "metadata_program"
+            }
+          }
+        },
+        {
+          "name": "collection_master_edition",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  101,
+                  116,
+                  97,
+                  100,
+                  97,
+                  116,
+                  97
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "metadata_program"
+              },
+              {
+                "kind": "account",
+                "path": "collection_mint"
+              },
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  100,
+                  105,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              }
+            ],
+            "program": {
+              "kind": "account",
+              "path": "metadata_program"
+            }
+          }
+        },
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "metadata_program",
+          "address": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
+        },
+        {
+          "name": "rent",
+          "address": "SysvarRent111111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "string"
+        },
+        {
+          "name": "uri",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "create_governance_item",
+      "discriminator": [
+        37,
+        225,
+        184,
+        135,
+        232,
+        248,
+        56,
+        77
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "quest_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  113,
+                  117,
+                  101,
+                  115,
+                  116,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "docs": [
+            "Remaining accounts should be pairs of [NFT token account, NFT metadata account] from the governance collection"
+          ],
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        },
+        {
+          "name": "question",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "create_proposal",
+      "discriminator": [
+        132,
+        116,
+        68,
+        174,
+        216,
+        160,
+        198,
+        22
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "proposal",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  111,
+                  112,
+                  111,
+                  115,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "proposal_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "proposal_key",
+          "type": "u64"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "distribute_dao_reward",
+      "discriminator": [
+        189,
+        115,
+        16,
+        167,
+        98,
+        186,
+        160,
+        116
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "answer_vote",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  110,
+                  115,
+                  119,
+                  101,
+                  114,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "voter_record",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  110,
+                  115,
+                  119,
+                  101,
+                  114,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              },
+              {
+                "kind": "account",
+                "path": "voter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "voter",
+          "docs": [
+            "The voter receiving the reward"
+          ],
+          "signer": true
+        },
+        {
+          "name": "voter_token_account",
+          "docs": [
+            "Voter's token account to receive rewards"
+          ],
+          "writable": true
+        },
+        {
+          "name": "treasury_pda",
+          "docs": [
+            "Treasury PDA - signer authority for reward distribution"
+          ],
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  101,
+                  97,
+                  115,
+                  117,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "treasury_token_account",
+          "docs": [
+            "Treasury token account holding the reward tokens"
+          ],
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  101,
+                  97,
+                  115,
+                  117,
+                  114,
+                  121
+                ]
+              },
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  111,
+                  107,
+                  101,
+                  110,
+                  95,
+                  97,
+                  99,
+                  99,
+                  111,
+                  117,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "finalize_answer",
+      "discriminator": [
+        240,
+        227,
+        67,
+        178,
+        248,
+        3,
+        172,
+        45
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "answer_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  110,
+                  115,
+                  119,
+                  101,
+                  114,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "initialize",
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "base_nft_collection"
+        },
+        {
+          "name": "treasury_pda",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  101,
+                  97,
+                  115,
+                  117,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "treasury_token_account",
+          "docs": [
+            "Treasury token account - holds reward tokens"
+          ],
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  101,
+                  97,
+                  115,
+                  117,
+                  114,
+                  121
+                ]
+              },
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  111,
+                  107,
+                  101,
+                  110,
+                  95,
+                  97,
+                  99,
+                  99,
+                  111,
+                  117,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "base_token_mint"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "rent",
+          "address": "SysvarRent111111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "min_total_vote",
+          "type": "u64"
+        },
+        {
+          "name": "max_total_vote",
+          "type": "u64"
+        },
+        {
+          "name": "min_required_nft",
+          "type": "u8"
+        },
+        {
+          "name": "max_votable_nft",
+          "type": "u8"
+        },
+        {
+          "name": "duration_hours",
+          "type": "u64"
+        },
+        {
+          "name": "constant_reward_token",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "make_decision_and_execute_answer",
+      "discriminator": [
+        71,
+        166,
+        60,
+        109,
+        237,
+        79,
+        199,
+        110
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "decision_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  100,
+                  101,
+                  99,
+                  105,
+                  115,
+                  105,
+                  111,
+                  110,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "answer_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  110,
+                  115,
+                  119,
+                  101,
+                  114,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        },
+        {
+          "name": "answer_keys",
+          "type": {
+            "vec": "u64"
+          }
+        }
+      ]
+    },
+    {
+      "name": "make_quest_result",
+      "discriminator": [
+        95,
+        98,
+        201,
+        45,
+        227,
+        156,
+        244,
+        137
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "quest_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  113,
+                  117,
+                  101,
+                  115,
+                  116,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "signer": true
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "mint_governance_nft",
+      "discriminator": [
+        254,
+        169,
+        110,
+        51,
+        79,
+        126,
+        4,
+        54
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "nft_mint",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "nft_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  110,
+                  102,
+                  116,
+                  45,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_nft_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "user"
+              },
+              {
+                "kind": "const",
+                "value": [
+                  6,
+                  221,
+                  246,
+                  225,
+                  215,
+                  101,
+                  161,
+                  147,
+                  217,
+                  203,
+                  225,
+                  70,
+                  206,
+                  235,
+                  121,
+                  172,
+                  28,
+                  180,
+                  133,
+                  237,
+                  95,
+                  91,
+                  55,
+                  145,
+                  58,
+                  140,
+                  245,
+                  133,
+                  126,
+                  255,
+                  0,
+                  169
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "nft_mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "metadata_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  101,
+                  116,
+                  97,
+                  100,
+                  97,
+                  116,
+                  97
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "metadata_program"
+              },
+              {
+                "kind": "account",
+                "path": "nft_mint"
+              }
+            ],
+            "program": {
+              "kind": "account",
+              "path": "metadata_program"
+            }
+          }
+        },
+        {
+          "name": "master_edition",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  101,
+                  116,
+                  97,
+                  100,
+                  97,
+                  116,
+                  97
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "metadata_program"
+              },
+              {
+                "kind": "account",
+                "path": "nft_mint"
+              },
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  100,
+                  105,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              }
+            ],
+            "program": {
+              "kind": "account",
+              "path": "metadata_program"
+            }
+          }
+        },
+        {
+          "name": "collection_mint",
+          "docs": [
+            "Collection mint account"
+          ],
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  108,
+                  108,
+                  101,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  45,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "collection_metadata",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  101,
+                  116,
+                  97,
+                  100,
+                  97,
+                  116,
+                  97
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "metadata_program"
+              },
+              {
+                "kind": "account",
+                "path": "collection_mint"
+              }
+            ],
+            "program": {
+              "kind": "account",
+              "path": "metadata_program"
+            }
+          }
+        },
+        {
+          "name": "collection_master_edition",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  101,
+                  116,
+                  97,
+                  100,
+                  97,
+                  116,
+                  97
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "metadata_program"
+              },
+              {
+                "kind": "account",
+                "path": "collection_mint"
+              },
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  100,
+                  105,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              }
+            ],
+            "program": {
+              "kind": "account",
+              "path": "metadata_program"
+            }
+          }
+        },
+        {
+          "name": "collection_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  108,
+                  108,
+                  101,
+                  99,
+                  116,
+                  105,
+                  111,
+                  110,
+                  45,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "metadata_program",
+          "address": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
+        },
+        {
+          "name": "rent",
+          "address": "SysvarRent111111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "string"
+        },
+        {
+          "name": "uri",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "pause",
+      "discriminator": [
+        211,
+        22,
+        221,
+        251,
+        74,
+        121,
+        193,
+        47
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "paused",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "set_answer",
+      "discriminator": [
+        230,
+        3,
+        167,
+        199,
+        128,
+        42,
+        235,
+        97
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "answer_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  110,
+                  115,
+                  119,
+                  101,
+                  114,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        },
+        {
+          "name": "answer_keys",
+          "type": {
+            "vec": "u64"
+          }
+        }
+      ]
+    },
+    {
+      "name": "set_answer_end_time",
+      "discriminator": [
+        26,
+        5,
+        178,
+        28,
+        44,
+        244,
+        160,
+        5
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "answer_vote",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  110,
+                  115,
+                  119,
+                  101,
+                  114,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "signer": true
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        },
+        {
+          "name": "new_end_time",
+          "type": "i64"
+        }
+      ]
+    },
+    {
+      "name": "set_decision_and_execute_answer",
+      "discriminator": [
+        10,
+        154,
+        188,
+        51,
+        58,
+        219,
+        240,
+        165
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "decision_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  100,
+                  101,
+                  99,
+                  105,
+                  115,
+                  105,
+                  111,
+                  110,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "answer_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  110,
+                  115,
+                  119,
+                  101,
+                  114,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        },
+        {
+          "name": "answer_keys",
+          "type": {
+            "vec": "u64"
+          }
+        }
+      ]
+    },
+    {
+      "name": "set_decision_end_time",
+      "discriminator": [
+        62,
+        93,
+        74,
+        75,
+        191,
+        60,
+        231,
+        143
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "signer": true
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        },
+        {
+          "name": "new_end_time",
+          "type": "i64"
+        }
+      ]
+    },
+    {
+      "name": "set_max_votes_per_voter",
+      "discriminator": [
+        74,
+        134,
+        132,
+        165,
+        223,
+        28,
+        191,
+        188
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "max_votes",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "set_minimum_required_nfts",
+      "discriminator": [
+        236,
+        213,
+        139,
+        244,
+        237,
+        187,
+        237,
+        118
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "new_minimum",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "set_proposal_result",
+      "discriminator": [
+        244,
+        140,
+        205,
+        100,
+        218,
+        122,
+        170,
+        101
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "proposal",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  111,
+                  112,
+                  111,
+                  115,
+                  97,
+                  108
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "proposal_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "signer": true
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "proposal_key",
+          "type": "u64"
+        },
+        {
+          "name": "result",
+          "type": {
+            "defined": {
+              "name": "ProposalResult"
+            }
+          }
+        },
+        {
+          "name": "result_vote",
+          "type": "u16"
+        }
+      ]
+    },
+    {
+      "name": "set_quest_duration_hours",
+      "discriminator": [
+        114,
+        98,
+        183,
+        87,
+        147,
+        43,
+        6,
+        6
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "hours",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "set_quest_end_time",
+      "discriminator": [
+        59,
+        111,
+        136,
+        85,
+        66,
+        188,
+        91,
+        85
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "signer": true
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        },
+        {
+          "name": "new_end_time",
+          "type": "i64"
+        }
+      ]
+    },
+    {
+      "name": "set_quest_result",
+      "discriminator": [
+        65,
+        247,
+        77,
+        188,
+        157,
+        240,
+        72,
+        151
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "quest_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  113,
+                  117,
+                  101,
+                  115,
+                  116,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "signer": true
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "set_reward_amount",
+      "discriminator": [
+        163,
+        135,
+        106,
+        255,
+        240,
+        184,
+        184,
+        92
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "reward_amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "set_total_vote",
+      "discriminator": [
+        134,
+        18,
+        127,
+        69,
+        22,
+        132,
+        70,
+        112
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "min_or_max",
+          "type": "string"
+        },
+        {
+          "name": "total_vote",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "start_decision",
+      "discriminator": [
+        58,
+        116,
+        43,
+        132,
+        225,
+        124,
+        30,
+        9
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "decision_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  100,
+                  101,
+                  99,
+                  105,
+                  115,
+                  105,
+                  111,
+                  110,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "update_base_token_mint",
+      "discriminator": [
+        76,
+        225,
+        16,
+        129,
+        124,
+        154,
+        75,
+        117
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "new_base_token_mint",
+          "docs": [
+            "New base token mint"
+          ]
+        },
+        {
+          "name": "treasury_pda",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  101,
+                  97,
+                  115,
+                  117,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "new_treasury_token_account",
+          "docs": [
+            "New treasury token account for the new mint",
+            "This creates a separate token account for each token mint"
+          ],
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  101,
+                  97,
+                  115,
+                  117,
+                  114,
+                  121
+                ]
+              },
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  111,
+                  107,
+                  101,
+                  110,
+                  95,
+                  97,
+                  99,
+                  99,
+                  111,
+                  117,
+                  110,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "new_base_token_mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "rent",
+          "address": "SysvarRent111111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "update_voter_checkpoint",
+      "discriminator": [
+        254,
+        228,
+        69,
+        157,
+        5,
+        59,
+        50,
+        27
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "voter",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "voter_checkpoints",
+          "docs": [
+            "Voter's checkpoint history",
+            "Stores historical voting power at different slots"
+          ],
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  111,
+                  116,
+                  101,
+                  114,
+                  95,
+                  99,
+                  104,
+                  101,
+                  99,
+                  107,
+                  112,
+                  111,
+                  105,
+                  110,
+                  116,
+                  115
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "voter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "docs": [
+            "Remaining accounts should be pairs of [NFT token account, NFT metadata account] from the governance collection"
+          ],
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "vote_answer",
+      "discriminator": [
+        222,
+        220,
+        255,
+        139,
+        204,
+        94,
+        144,
+        28
+      ],
+      "accounts": [
+        {
+          "name": "governance",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "voter",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "answer_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  110,
+                  115,
+                  119,
+                  101,
+                  114,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "answer_option",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  110,
+                  115,
+                  119,
+                  101,
+                  114,
+                  95,
+                  111,
+                  112,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              },
+              {
+                "kind": "arg",
+                "path": "answer_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "answer_voter_record",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  110,
+                  115,
+                  119,
+                  101,
+                  114,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              },
+              {
+                "kind": "account",
+                "path": "voter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "voter_checkpoints",
+          "docs": [
+            "Voter's checkpoint history - stores voting power at different slots",
+            "Similar to OpenZeppelin's Votes.sol checkpoint system"
+          ],
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  111,
+                  116,
+                  101,
+                  114,
+                  95,
+                  99,
+                  104,
+                  101,
+                  99,
+                  107,
+                  112,
+                  111,
+                  105,
+                  110,
+                  116,
+                  115
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "voter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        },
+        {
+          "name": "answer_key",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "vote_decision",
+      "discriminator": [
+        141,
+        81,
+        199,
+        176,
+        1,
+        217,
+        197,
+        36
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "decision_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  100,
+                  101,
+                  99,
+                  105,
+                  115,
+                  105,
+                  111,
+                  110,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "voter_record",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  100,
+                  101,
+                  99,
+                  105,
+                  115,
+                  105,
+                  111,
+                  110,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              },
+              {
+                "kind": "account",
+                "path": "voter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "quest_voter_record",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  113,
+                  117,
+                  101,
+                  115,
+                  116,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              },
+              {
+                "kind": "account",
+                "path": "voter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "voter",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        },
+        {
+          "name": "vote_choice",
+          "type": {
+            "defined": {
+              "name": "DecisionVoteChoice"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "vote_quest",
+      "discriminator": [
+        13,
+        14,
+        24,
+        144,
+        241,
+        226,
+        83,
+        130
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "governance_item",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  105,
+                  116,
+                  101,
+                  109
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "quest_vote",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  113,
+                  117,
+                  101,
+                  115,
+                  116,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              }
+            ]
+          }
+        },
+        {
+          "name": "voter_record",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  113,
+                  117,
+                  101,
+                  115,
+                  116,
+                  95,
+                  118,
+                  111,
+                  116,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "quest_key"
+              },
+              {
+                "kind": "account",
+                "path": "voter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "voter",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "voter_checkpoints",
+          "docs": [
+            "Voter's checkpoint history - stores voting power at different slots",
+            "If not initialized, voter will have 0 voting power"
+          ],
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  111,
+                  116,
+                  101,
+                  114,
+                  95,
+                  99,
+                  104,
+                  101,
+                  99,
+                  107,
+                  112,
+                  111,
+                  105,
+                  110,
+                  116,
+                  115
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "voter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "clock",
+          "address": "SysvarC1ock11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "quest_key",
+          "type": "u64"
+        },
+        {
+          "name": "vote_choice",
+          "type": {
+            "defined": {
+              "name": "QuestVoteChoice"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "withdraw_tokens",
+      "discriminator": [
+        2,
+        4,
+        225,
+        61,
+        19,
+        182,
+        106,
+        170
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  111,
+                  118,
+                  101,
+                  114,
+                  110,
+                  97,
+                  110,
+                  99,
+                  101,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "treasury_pda",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  114,
+                  101,
+                  97,
+                  115,
+                  117,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "treasury_token_account",
+          "docs": [
+            "Treasury token account holding the tokens"
+          ],
+          "writable": true
+        },
+        {
+          "name": "destination_token_account",
+          "docs": [
+            "Destination token account to receive withdrawn tokens"
+          ],
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "AnswerOption",
+      "discriminator": [
+        196,
+        35,
+        157,
+        240,
+        44,
+        198,
+        28,
+        243
+      ]
+    },
+    {
+      "name": "AnswerVote",
+      "discriminator": [
+        175,
+        44,
+        119,
+        161,
+        84,
+        77,
+        217,
+        88
+      ]
+    },
+    {
+      "name": "AnswerVoterRecord",
+      "discriminator": [
+        103,
+        47,
+        246,
+        49,
+        18,
+        77,
+        101,
+        158
+      ]
+    },
+    {
+      "name": "DecisionVote",
+      "discriminator": [
+        214,
+        38,
+        107,
+        156,
+        176,
+        194,
+        4,
+        136
+      ]
+    },
+    {
+      "name": "DecisionVoterRecord",
+      "discriminator": [
+        51,
+        94,
+        120,
+        232,
+        39,
+        192,
+        232,
+        48
+      ]
+    },
+    {
+      "name": "Governance",
+      "discriminator": [
+        18,
+        143,
+        88,
+        13,
+        73,
+        217,
+        47,
+        49
+      ]
+    },
+    {
+      "name": "GovernanceConfig",
+      "discriminator": [
+        81,
+        63,
+        124,
+        107,
+        210,
+        100,
+        145,
+        70
+      ]
+    },
+    {
+      "name": "GovernanceItem",
+      "discriminator": [
+        179,
+        52,
+        33,
+        225,
+        212,
+        45,
+        211,
+        154
+      ]
+    },
+    {
+      "name": "Proposal",
+      "discriminator": [
+        26,
+        94,
+        189,
+        187,
+        116,
+        136,
+        53,
+        33
+      ]
+    },
+    {
+      "name": "QuestVote",
+      "discriminator": [
+        102,
+        5,
+        65,
+        206,
+        17,
+        132,
+        196,
+        105
+      ]
+    },
+    {
+      "name": "QuestVoterRecord",
+      "discriminator": [
+        166,
+        161,
+        4,
+        27,
+        201,
+        98,
+        176,
+        61
+      ]
+    },
+    {
+      "name": "VoterCheckpoints",
+      "discriminator": [
+        52,
+        90,
+        186,
+        11,
+        84,
+        190,
+        115,
+        129
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "AnswerEndTimeUpdated",
+      "discriminator": [
+        80,
+        191,
+        238,
+        73,
+        16,
+        207,
+        152,
+        188
+      ]
+    },
+    {
+      "name": "AnswerFinalized",
+      "discriminator": [
+        37,
+        15,
+        210,
+        129,
+        101,
+        243,
+        40,
+        192
+      ]
+    },
+    {
+      "name": "AnswerStarted",
+      "discriminator": [
+        43,
+        51,
+        254,
+        40,
+        4,
+        223,
+        118,
+        241
+      ]
+    },
+    {
+      "name": "CheckpointUpdated",
+      "discriminator": [
+        143,
+        94,
+        126,
+        114,
+        142,
+        212,
+        54,
+        152
+      ]
+    },
+    {
+      "name": "CollectionCreated",
+      "discriminator": [
+        69,
+        167,
+        76,
+        142,
+        182,
+        183,
+        233,
+        139
+      ]
+    },
+    {
+      "name": "DecisionCancelled",
+      "discriminator": [
+        136,
+        245,
+        7,
+        102,
+        105,
+        149,
+        242,
+        149
+      ]
+    },
+    {
+      "name": "DecisionEndTimeUpdated",
+      "discriminator": [
+        9,
+        168,
+        129,
+        7,
+        38,
+        187,
+        228,
+        131
+      ]
+    },
+    {
+      "name": "DecisionResultMade",
+      "discriminator": [
+        221,
+        166,
+        243,
+        124,
+        179,
+        108,
+        218,
+        191
+      ]
+    },
+    {
+      "name": "DecisionResultSet",
+      "discriminator": [
+        67,
+        106,
+        68,
+        255,
+        67,
+        110,
+        128,
+        18
+      ]
+    },
+    {
+      "name": "DecisionStarted",
+      "discriminator": [
+        223,
+        238,
+        44,
+        3,
+        128,
+        144,
+        211,
+        109
+      ]
+    },
+    {
+      "name": "GovernanceItemCreated",
+      "discriminator": [
+        218,
+        210,
+        133,
+        156,
+        17,
+        215,
+        207,
+        130
+      ]
+    },
+    {
+      "name": "GovernanceNftMinted",
+      "discriminator": [
+        103,
+        11,
+        11,
+        240,
+        80,
+        68,
+        239,
+        9
+      ]
+    },
+    {
+      "name": "GovernancePaused",
+      "discriminator": [
+        129,
+        71,
+        164,
+        74,
+        29,
+        52,
+        170,
+        192
+      ]
+    },
+    {
+      "name": "GovernanceUnpaused",
+      "discriminator": [
+        190,
+        55,
+        213,
+        134,
+        65,
+        122,
+        16,
+        104
+      ]
+    },
+    {
+      "name": "MaxTotalVoteUpdated",
+      "discriminator": [
+        238,
+        159,
+        149,
+        197,
+        183,
+        203,
+        60,
+        105
+      ]
+    },
+    {
+      "name": "MaxVotesUpdated",
+      "discriminator": [
+        150,
+        221,
+        215,
+        121,
+        166,
+        80,
+        106,
+        231
+      ]
+    },
+    {
+      "name": "MinTotalVoteUpdated",
+      "discriminator": [
+        13,
+        100,
+        147,
+        163,
+        249,
+        45,
+        149,
+        162
+      ]
+    },
+    {
+      "name": "MinimumNftsUpdated",
+      "discriminator": [
+        62,
+        240,
+        109,
+        77,
+        238,
+        218,
+        113,
+        137
+      ]
+    },
+    {
+      "name": "ProposalCreated",
+      "discriminator": [
+        186,
+        8,
+        160,
+        108,
+        81,
+        13,
+        51,
+        206
+      ]
+    },
+    {
+      "name": "ProposalResultSet",
+      "discriminator": [
+        47,
+        45,
+        43,
+        22,
+        206,
+        184,
+        251,
+        111
+      ]
+    },
+    {
+      "name": "QuestCancelled",
+      "discriminator": [
+        180,
+        76,
+        82,
+        192,
+        51,
+        17,
+        186,
+        11
+      ]
+    },
+    {
+      "name": "QuestDurationUpdated",
+      "discriminator": [
+        172,
+        199,
+        138,
+        94,
+        174,
+        242,
+        158,
+        113
+      ]
+    },
+    {
+      "name": "QuestEndTimeUpdated",
+      "discriminator": [
+        220,
+        51,
+        74,
+        235,
+        54,
+        192,
+        239,
+        115
+      ]
+    },
+    {
+      "name": "QuestResultMade",
+      "discriminator": [
+        54,
+        19,
+        105,
+        214,
+        4,
+        243,
+        220,
+        162
+      ]
+    },
+    {
+      "name": "QuestResultSet",
+      "discriminator": [
+        71,
+        255,
+        83,
+        11,
+        84,
+        160,
+        244,
+        204
+      ]
+    },
+    {
+      "name": "RewardAmountUpdated",
+      "discriminator": [
+        245,
+        38,
+        58,
+        235,
+        9,
+        102,
+        220,
+        111
+      ]
+    },
+    {
+      "name": "RewardDistributed",
+      "discriminator": [
+        36,
+        65,
+        223,
+        38,
+        136,
+        162,
+        10,
+        30
+      ]
+    },
+    {
+      "name": "VoteDecisionCast",
+      "discriminator": [
+        132,
+        104,
+        219,
+        241,
+        172,
+        133,
+        115,
+        127
+      ]
+    },
+    {
+      "name": "VoteQuestCast",
+      "discriminator": [
+        142,
+        97,
+        106,
+        89,
+        49,
+        143,
+        71,
+        133
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "GovernancePaused",
+      "msg": "Governance is paused"
+    },
+    {
+      "code": 6001,
+      "name": "QuestionTooLong",
+      "msg": "Question is too long (max 280 characters)"
+    },
+    {
+      "code": 6002,
+      "name": "QuestAlreadyFinalized",
+      "msg": "Quest already finalized"
+    },
+    {
+      "code": 6003,
+      "name": "VotingPeriodEnded",
+      "msg": "Voting period has ended"
+    },
+    {
+      "code": 6004,
+      "name": "VotingPeriodNotEnded",
+      "msg": "Voting period has not ended yet"
+    },
+    {
+      "code": 6005,
+      "name": "InvalidVoteChoice",
+      "msg": "Invalid vote choice"
+    },
+    {
+      "code": 6006,
+      "name": "AlreadyVoted",
+      "msg": "Already voted"
+    },
+    {
+      "code": 6007,
+      "name": "InsufficientVotes",
+      "msg": "Insufficient votes to proceed"
+    },
+    {
+      "code": 6008,
+      "name": "AlreadyFinalized",
+      "msg": "Already finalized"
+    },
+    {
+      "code": 6009,
+      "name": "Unauthorized",
+      "msg": "Unauthorized"
+    },
+    {
+      "code": 6010,
+      "name": "QuestNotApproved",
+      "msg": "Quest not approved"
+    },
+    {
+      "code": 6011,
+      "name": "DecisionAlreadyStarted",
+      "msg": "Decision already started"
+    },
+    {
+      "code": 6012,
+      "name": "DecisionAlreadyFinalized",
+      "msg": "Decision already finalized"
+    },
+    {
+      "code": 6013,
+      "name": "AnswerAlreadyFinalized",
+      "msg": "Answer already finalized"
+    },
+    {
+      "code": 6014,
+      "name": "InvalidAnswerKey",
+      "msg": "Invalid answer key"
+    },
+    {
+      "code": 6015,
+      "name": "NotEligibleForReward",
+      "msg": "Not eligible for reward"
+    },
+    {
+      "code": 6016,
+      "name": "RewardAlreadyClaimed",
+      "msg": "Reward already claimed"
+    },
+    {
+      "code": 6017,
+      "name": "InsufficientNfts",
+      "msg": "Insufficient NFTs"
+    },
+    {
+      "code": 6018,
+      "name": "InvalidParameter",
+      "msg": "Invalid parameter"
+    },
+    {
+      "code": 6019,
+      "name": "InvalidDuration",
+      "msg": "Duration must be greater than 0"
+    },
+    {
+      "code": 6020,
+      "name": "InvalidMaxVotes",
+      "msg": "Max votes must be greater than 0"
+    },
+    {
+      "code": 6021,
+      "name": "InvalidWithdrawAddress",
+      "msg": "Cannot withdraw to zero address"
+    },
+    {
+      "code": 6022,
+      "name": "InvalidWithdrawAmount",
+      "msg": "Withdraw amount must be greater than 0"
+    },
+    {
+      "code": 6023,
+      "name": "InsufficientBalance",
+      "msg": "Insufficient balance"
+    },
+    {
+      "code": 6024,
+      "name": "TransferFailed",
+      "msg": "Transfer failed"
+    },
+    {
+      "code": 6025,
+      "name": "TitleTooLong",
+      "msg": "Title is too long (max 200 characters)"
+    },
+    {
+      "code": 6026,
+      "name": "TitleEmpty",
+      "msg": "Title cannot be empty"
+    },
+    {
+      "code": 6027,
+      "name": "ResultTooLong",
+      "msg": "Result is too long (max 500 characters)"
+    },
+    {
+      "code": 6028,
+      "name": "InvalidMetadata",
+      "msg": "Invalid metadata provided"
+    },
+    {
+      "code": 6029,
+      "name": "CollectionAlreadyExists",
+      "msg": "Collection already exists"
+    },
+    {
+      "code": 6030,
+      "name": "CollectionNotCreated",
+      "msg": "Collection not created yet"
+    },
+    {
+      "code": 6031,
+      "name": "AnswerResultEmpty",
+      "msg": "Answer result is empty"
+    },
+    {
+      "code": 6032,
+      "name": "AnswerVoteNotFinalized",
+      "msg": "Answer vote is not finalized"
+    },
+    {
+      "code": 6033,
+      "name": "VoterDidNotVoteForWinningAnswer",
+      "msg": "Voter did not vote for the winning answer"
+    },
+    {
+      "code": 6034,
+      "name": "VoterHasNoVotes",
+      "msg": "Voter has no votes"
+    },
+    {
+      "code": 6035,
+      "name": "VoterAlreadyRewarded",
+      "msg": "Voter has already been rewarded"
+    },
+    {
+      "code": 6036,
+      "name": "MathOverflow",
+      "msg": "Math overflow occurred"
+    },
+    {
+      "code": 6037,
+      "name": "InsufficientTreasuryBalance",
+      "msg": "Insufficient treasury balance"
+    },
+    {
+      "code": 6038,
+      "name": "AnswerVotingNotStarted",
+      "msg": "Answer voting has not started"
+    },
+    {
+      "code": 6039,
+      "name": "AnswerVoteFinalized",
+      "msg": "Answer vote has already been finalized"
+    },
+    {
+      "code": 6040,
+      "name": "InvalidAnswerKeys",
+      "msg": "Invalid answer keys provided"
+    },
+    {
+      "code": 6041,
+      "name": "VoteCountNotEqual",
+      "msg": "Vote counts are not equal"
+    },
+    {
+      "code": 6042,
+      "name": "InvalidPhase",
+      "msg": "Invalid phase for this operation"
+    },
+    {
+      "code": 6043,
+      "name": "InvalidNftOwner",
+      "msg": "Invalid NFT owner"
+    },
+    {
+      "code": 6044,
+      "name": "InvalidNftAmount",
+      "msg": "Invalid NFT amount"
+    },
+    {
+      "code": 6045,
+      "name": "MaxTotalVoteReached",
+      "msg": "Maximum total vote limit reached"
+    },
+    {
+      "code": 6046,
+      "name": "InsufficientVotingPower",
+      "msg": "Insufficient voting power"
+    },
+    {
+      "code": 6047,
+      "name": "NoQuestParticipation",
+      "msg": "Must participate in quest voting to vote on decision"
+    }
+  ],
+  "types": [
+    {
+      "name": "AnswerEndTimeUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "old_end_time",
+            "type": "i64"
+          },
+          {
+            "name": "new_end_time",
+            "type": "i64"
+          },
+          {
+            "name": "updated_by",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AnswerFinalized",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "winning_answer",
+            "type": "u64"
+          },
+          {
+            "name": "finalized_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AnswerOption",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "answer_key",
+            "type": "u64"
+          },
+          {
+            "name": "total_votes",
+            "type": "u64"
+          },
+          {
+            "name": "is_active",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AnswerStarted",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          },
+          {
+            "name": "end_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AnswerVote",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "total_voted",
+            "type": "u64"
+          },
+          {
+            "name": "finalized",
+            "type": "bool"
+          },
+          {
+            "name": "winning_answer",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AnswerVoterRecord",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "voter",
+            "type": "pubkey"
+          },
+          {
+            "name": "answer_key",
+            "type": "u64"
+          },
+          {
+            "name": "vote_count",
+            "type": "u8"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "rewarded",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Checkpoint",
+      "docs": [
+        "Individual checkpoint recording voting power at a specific slot"
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "slot",
+            "type": "u64"
+          },
+          {
+            "name": "nft_count",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CheckpointUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "voter",
+            "type": "pubkey"
+          },
+          {
+            "name": "slot",
+            "type": "u64"
+          },
+          {
+            "name": "nft_count",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CollectionCreated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "collection_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DecisionCancelled",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "cancelled_by",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_votes_at_cancellation",
+            "type": "u64"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DecisionEndTimeUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "old_end_time",
+            "type": "i64"
+          },
+          {
+            "name": "new_end_time",
+            "type": "i64"
+          },
+          {
+            "name": "updated_by",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DecisionResult",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Pending"
+          },
+          {
+            "name": "Success"
+          },
+          {
+            "name": "Adjourn"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DecisionResultMade",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "result",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DecisionResultSet",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "result",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DecisionStarted",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          },
+          {
+            "name": "end_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DecisionVote",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "count_success",
+            "type": "u64"
+          },
+          {
+            "name": "count_adjourn",
+            "type": "u64"
+          },
+          {
+            "name": "total_voted",
+            "type": "u64"
+          },
+          {
+            "name": "finalized",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DecisionVoteChoice",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Success"
+          },
+          {
+            "name": "Adjourn"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DecisionVoterRecord",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "voter",
+            "type": "pubkey"
+          },
+          {
+            "name": "vote_choice",
+            "type": {
+              "defined": {
+                "name": "DecisionVoteChoice"
+              }
+            }
+          },
+          {
+            "name": "votes",
+            "type": "u64"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Governance",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_items",
+            "type": "u64"
+          },
+          {
+            "name": "active_items",
+            "type": "u64"
+          },
+          {
+            "name": "completed_items",
+            "type": "u64"
+          },
+          {
+            "name": "total_rewards_distributed",
+            "type": "u64"
+          },
+          {
+            "name": "total_nfts_minted",
+            "type": "u64"
+          },
+          {
+            "name": "collection_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "collection_created_at",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GovernanceConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "base_token_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "base_nft_collection",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury_bump",
+            "type": "u8"
+          },
+          {
+            "name": "paused",
+            "type": "bool"
+          },
+          {
+            "name": "min_total_vote",
+            "type": "u64"
+          },
+          {
+            "name": "max_total_vote",
+            "type": "u64"
+          },
+          {
+            "name": "min_required_nft",
+            "type": "u8"
+          },
+          {
+            "name": "max_votable_nft",
+            "type": "u8"
+          },
+          {
+            "name": "duration_hours",
+            "type": "u64"
+          },
+          {
+            "name": "constant_reward_token",
+            "type": "u64"
+          },
+          {
+            "name": "total_governance",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GovernanceItem",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "question",
+            "type": "string"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "quest_result",
+            "type": {
+              "defined": {
+                "name": "QuestResult"
+              }
+            }
+          },
+          {
+            "name": "decision_result",
+            "type": {
+              "defined": {
+                "name": "DecisionResult"
+              }
+            }
+          },
+          {
+            "name": "answer_result",
+            "type": "u64"
+          },
+          {
+            "name": "start_slot",
+            "type": "u64"
+          },
+          {
+            "name": "quest_start_time",
+            "type": "i64"
+          },
+          {
+            "name": "quest_end_time",
+            "type": "i64"
+          },
+          {
+            "name": "decision_start_time",
+            "type": "i64"
+          },
+          {
+            "name": "decision_end_time",
+            "type": "i64"
+          },
+          {
+            "name": "answer_start_time",
+            "type": "i64"
+          },
+          {
+            "name": "answer_end_time",
+            "type": "i64"
+          },
+          {
+            "name": "answer_keys",
+            "type": {
+              "vec": "u64"
+            }
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GovernanceItemCreated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "question",
+            "type": "string"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          },
+          {
+            "name": "end_at",
+            "type": "u64"
+          },
+          {
+            "name": "start_slot",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GovernanceNftMinted",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "user",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "minted_at",
+            "type": "u64"
+          },
+          {
+            "name": "nft_number",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GovernancePaused",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "paused_by",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GovernanceUnpaused",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "unpaused_by",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MaxTotalVoteUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "old_max",
+            "type": "u64"
+          },
+          {
+            "name": "new_max",
+            "type": "u64"
+          },
+          {
+            "name": "updated_by",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MaxVotesUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "old_max",
+            "type": "u8"
+          },
+          {
+            "name": "new_max",
+            "type": "u8"
+          },
+          {
+            "name": "updated_by",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MinTotalVoteUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "old_min",
+            "type": "u64"
+          },
+          {
+            "name": "new_min",
+            "type": "u64"
+          },
+          {
+            "name": "updated_by",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MinimumNftsUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "old_minimum",
+            "type": "u8"
+          },
+          {
+            "name": "new_minimum",
+            "type": "u8"
+          },
+          {
+            "name": "updated_by",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Proposal",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "proposal_key",
+            "type": "u64"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "result",
+            "type": {
+              "defined": {
+                "name": "ProposalResult"
+              }
+            }
+          },
+          {
+            "name": "total_vote",
+            "type": "u16"
+          },
+          {
+            "name": "result_vote",
+            "type": "u16"
+          },
+          {
+            "name": "end_time",
+            "type": "i64"
+          },
+          {
+            "name": "start_block",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProposalCreated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "proposal_key",
+            "type": "u64"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
+          },
+          {
+            "name": "end_time",
+            "type": "i64"
+          },
+          {
+            "name": "start_block",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProposalResult",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Pending"
+          },
+          {
+            "name": "Yes"
+          },
+          {
+            "name": "No"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProposalResultSet",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "proposal_key",
+            "type": "u64"
+          },
+          {
+            "name": "result",
+            "type": {
+              "defined": {
+                "name": "ProposalResult"
+              }
+            }
+          },
+          {
+            "name": "result_vote",
+            "type": "u16"
+          },
+          {
+            "name": "total_vote",
+            "type": "u16"
+          },
+          {
+            "name": "finalized_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuestCancelled",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "total_voted",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuestDurationUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "old_duration",
+            "type": "u64"
+          },
+          {
+            "name": "new_duration",
+            "type": "u64"
+          },
+          {
+            "name": "updated_by",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuestEndTimeUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "old_end_time",
+            "type": "i64"
+          },
+          {
+            "name": "new_end_time",
+            "type": "i64"
+          },
+          {
+            "name": "updated_by",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuestResult",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Pending"
+          },
+          {
+            "name": "Approved"
+          },
+          {
+            "name": "Rejected"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuestResultMade",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "result",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuestResultSet",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "result",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuestVote",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "count_approver",
+            "type": "u64"
+          },
+          {
+            "name": "count_rejector",
+            "type": "u64"
+          },
+          {
+            "name": "total_voted",
+            "type": "u64"
+          },
+          {
+            "name": "finalized",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuestVoteChoice",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Approve"
+          },
+          {
+            "name": "Reject"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QuestVoterRecord",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "voter",
+            "type": "pubkey"
+          },
+          {
+            "name": "vote_count",
+            "type": "u8"
+          },
+          {
+            "name": "vote_choice",
+            "type": {
+              "defined": {
+                "name": "QuestVoteChoice"
+              }
+            }
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RewardAmountUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "old_amount",
+            "type": "u64"
+          },
+          {
+            "name": "new_amount",
+            "type": "u64"
+          },
+          {
+            "name": "updated_by",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RewardDistributed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "voter",
+            "type": "pubkey"
+          },
+          {
+            "name": "answer_key",
+            "type": "u64"
+          },
+          {
+            "name": "vote_count",
+            "type": "u64"
+          },
+          {
+            "name": "reward_amount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoteDecisionCast",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "vote_choice",
+            "type": {
+              "defined": {
+                "name": "DecisionVoteChoice"
+              }
+            }
+          },
+          {
+            "name": "voter",
+            "type": "pubkey"
+          },
+          {
+            "name": "votes",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoteQuestCast",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "quest_key",
+            "type": "u64"
+          },
+          {
+            "name": "vote_choice",
+            "type": {
+              "defined": {
+                "name": "QuestVoteChoice"
+              }
+            }
+          },
+          {
+            "name": "voter",
+            "type": "pubkey"
+          },
+          {
+            "name": "votes",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoterCheckpoints",
+      "docs": [
+        "Stores historical checkpoints for a voter",
+        "Similar to OpenZeppelin's Votes.sol checkpoint system"
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "voter",
+            "type": "pubkey"
+          },
+          {
+            "name": "checkpoints",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "Checkpoint"
+                }
+              }
+            }
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ]
+}

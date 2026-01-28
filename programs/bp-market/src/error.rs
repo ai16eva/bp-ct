@@ -1,0 +1,57 @@
+use anchor_lang::prelude::*;
+
+#[error_code]
+pub enum ProgramErrorCode {
+    #[msg("The configuration account is already initialized.")]
+    AlreadyInitialized,
+    #[msg("You are not authorized to perform this action.")]
+    Unauthorized,
+    #[msg("Operation resulted in an error.")]
+    MathOperationError,
+    #[msg("Market/AdjournMarket: Market is not finished")]
+    MarketNotFinished,
+    #[msg("Market/DraftMarket: Market key does exist")]
+    MarketDoesExist,
+    #[msg("Market/Bet: Market is not approved")]
+    MarketNotApproved,
+    #[msg("The maximum number of answers has been reached.")]
+    MaxAnswersReached,
+    #[msg("The answer key already exists.")]
+    AnswerAlreadyExists,
+    #[msg("The answer key does not exist.")]
+    AnswerNotExists,
+    #[msg("Market/SuccessMarket: Market does not contain answerKey")]
+    MarketDoesNotContainAnswerKey,
+    #[msg("Market/Receive: Cannot receive token")]
+    CannotClaimToken,
+    #[msg("Market/Retrieve: Cannot Retrieve not finished market")]
+    CannotRetrieveToken,
+    #[msg("Market/Retrieve: Cannot Retrieve before 180 days")]
+    CannotRetrieveBeforeDate,
+    #[msg("Market/Receive: Answer key is not succeeded answer key")]
+    AnswerKeyNotRight,
+    #[msg("Market/Bet: Invalid bet mint")]
+    InvalidBetMint,
+    #[msg("Market/ClaimToken: Invalid time range")]
+    InvalidAnswerKey,
+    #[msg("Market/ClaimToken: Invalid answer key")]
+    InvalidTimeRange,
+    #[msg("Operation Error: Overflow")]
+    Overflow,
+    #[msg("Invalid reward mint")]
+    InvalidRewardMint,
+    #[msg("No answer keys provided")]
+    NoAnswersProvided,
+    #[msg("User is already locked")]
+    UserAlreadyLocked,
+    #[msg("User is not locked")]
+    UserNotLocked,
+    #[msg("Maximum number of locked users has been reached")]
+    MaxLockedUsersReached,
+    #[msg("Market has not been resolved yet")]
+    MarketNotResolved,
+    #[msg("Insufficient funds in the market")]
+    InsufficientFunds,
+    #[msg("Bet amount must be greater than zero")]
+    InvalidBetAmount,
+}
